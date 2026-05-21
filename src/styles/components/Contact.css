@@ -1,0 +1,223 @@
+.contact-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    background-color: #f9fafb;
+}
+
+@media (min-width: 768px) {
+    .contact-section { padding-top: 4rem; padding-bottom: 4rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+    .contact-section {
+        background-color: rgba(15, 23, 42, 0.3);
+    }
+}
+
+.contact-container {
+    max-width: 56rem;
+}
+
+.contact-card {
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .contact-card {
+        padding: 3rem;
+        border-radius: 3rem;
+    }
+}
+
+.contact-bg-effect {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 16rem;
+    height: 16rem;
+    background-color: rgba(66, 184, 131, 0.2);
+    border-radius: 9999px;
+    filter: blur(80px);
+    margin-right: -4rem;
+    margin-top: -4rem;
+    pointer-events: none;
+}
+
+.contact-grid {
+    position: relative;
+    z-index: 10;
+    display: grid;
+    gap: 2.5rem;
+    width: 100%;
+    min-width: 0;
+}
+
+@media (min-width: 768px) {
+    .contact-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 4rem;
+    }
+}
+
+.contact-info {
+    min-width: 0;
+}
+
+.contact-title {
+    font-size: 1.875rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.25;
+    color: var(--color-vue-blue);
+}
+
+@media (min-width: 768px) {
+    .contact-title { font-size: 2.25rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+    .contact-title { color: #ffffff; }
+}
+
+.contact-text {
+    font-size: 1rem;
+    color: #4b5563;
+    margin-bottom: 2rem;
+    line-height: 1.625;
+}
+
+@media (min-width: 768px) {
+    .contact-text { font-size: 1.125rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+    .contact-text { color: #d1d5db; }
+}
+
+.contact-items {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 0;
+}
+
+.contact-icon-wrapper {
+    width: 2.5rem;
+    height: 2.5rem;
+    flex-shrink: 0;
+    border-radius: 9999px;
+    background-color: rgba(66, 184, 131, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-vue-green);
+}
+
+.contact-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+}
+
+.contact-item-text {
+    font-weight: 700;
+    color: var(--color-vue-blue);
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .contact-item-text { font-size: 1rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+    .contact-item-text { color: #ffffff; }
+}
+
+.text-break {
+    word-break: break-all;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    min-width: 0;
+    width: 100%;
+}
+
+.contact-input,
+.contact-textarea {
+    width: 100%;
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    outline: none;
+    transition: all 0.3s;
+    color: var(--color-vue-blue);
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .contact-input, .contact-textarea { padding: 1rem 1.5rem; font-size: 1rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+    .contact-input,
+    .contact-textarea {
+        background-color: rgba(2, 6, 23, 0.5);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        color: #ffffff;
+    }
+}
+
+.contact-input::placeholder,
+.contact-textarea::placeholder {
+    color: #9ca3af;
+}
+
+.contact-input:focus,
+.contact-textarea:focus {
+    box-shadow: 0 0 0 2px var(--color-vue-green);
+}
+
+.contact-textarea {
+    resize: none;
+}
+
+.contact-submit {
+    width: 100%;
+    background-color: var(--color-vue-blue);
+    color: #ffffff;
+    padding: 1rem;
+    border-radius: 1rem;
+    font-weight: 800;
+    font-size: 1.125rem;
+    transition: all 0.3s;
+    border: none;
+    cursor: pointer;
+}
+
+@media (min-width: 768px) {
+    .contact-submit { padding: 1.25rem; font-size: 1.25rem; }
+}
+
+@media (prefers-color-scheme: dark) {
+    .contact-submit {
+        background-color: var(--color-vue-green);
+    }
+}
+
+.contact-submit:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    transform: scale(1.02);
+}

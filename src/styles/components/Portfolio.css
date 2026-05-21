@@ -1,0 +1,125 @@
+.portfolio-section {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    background-color: #f9fafb;
+    position: relative;
+}
+
+@media (prefers-color-scheme: dark) {
+    .portfolio-section {
+        background-color: rgba(15, 23, 42, 0.3);
+    }
+}
+
+.portfolio-header {
+    text-align: center;
+    max-width: 42rem;
+    margin: 0 auto;
+    margin-bottom: 5rem;
+}
+
+.portfolio-title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--color-vue-blue);
+}
+
+@media (prefers-color-scheme: dark) {
+    .portfolio-title {
+        color: #ffffff;
+    }
+}
+
+.portfolio-subtitle {
+    color: #4b5563;
+}
+
+@media (prefers-color-scheme: dark) {
+    .portfolio-subtitle {
+        color: #9ca3af;
+    }
+}
+
+.portfolio-grid {
+    display: grid;
+    gap: 3rem;
+}
+
+@media (min-width: 768px) {
+    .portfolio-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.portfolio-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    padding: 1rem;
+    transition: all 0.5s;
+}
+
+.portfolio-img-wrapper {
+    aspect-ratio: 16 / 9;
+    border-radius: 1rem;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+}
+
+.img-ecommerce { background-color: var(--color-vue-blue); }
+.img-clinic { background-color: var(--color-vue-green); }
+
+.portfolio-img-overlay {
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+    transition: opacity 0.5s;
+}
+
+.group:hover .portfolio-img-overlay {
+    opacity: 0.2;
+}
+
+.overlay-ecommerce {
+    background: linear-gradient(to top right, var(--color-vue-blue), var(--color-vue-green));
+}
+.overlay-clinic {
+    background: linear-gradient(to top right, var(--color-vue-green), var(--color-vue-blue));
+}
+
+.portfolio-card-content {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.portfolio-badge {
+    color: var(--color-vue-green);
+    font-weight: 700;
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.portfolio-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    color: var(--color-vue-blue);
+}
+
+@media (prefers-color-scheme: dark) {
+    .portfolio-card-title {
+        color: #ffffff;
+    }
+}
+
+.portfolio-card-text {
+    color: #4b5563;
+}
+
+@media (prefers-color-scheme: dark) {
+    .portfolio-card-text {
+        color: #d1d5db;
+    }
+}

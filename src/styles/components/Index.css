@@ -1,0 +1,43 @@
+.testimonials-wrapper {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	overflow: hidden;
+	background-color: #ffffff;
+}
+
+@media (prefers-color-scheme: dark) {
+	.testimonials-wrapper {
+		background-color: #020617;
+	}
+}
+
+.testimonials-header {
+	text-align: center;
+	max-width: 42rem;
+	margin: 0 auto;
+	margin-bottom: 2rem;
+}
+
+.testimonials-title {
+	font-size: 2.25rem;
+	font-weight: 700;
+	margin-bottom: 1rem;
+	color: var(--color-vue-blue);
+}
+
+@media (prefers-color-scheme: dark) {
+	.testimonials-title {
+		color: #ffffff;
+	}
+}
+
+.testimonials-subtitle {
+	color: #4b5563;
+	font-size: 1.125rem;
+}
+
+@media (prefers-color-scheme: dark) {
+	.testimonials-subtitle {
+		color: #9ca3af;
+	}
+}

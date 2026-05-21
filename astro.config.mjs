@@ -6,6 +6,5 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   integrations: [vue()],
   vite: {
-    plugins: [tailwindcss()]
   }
 });

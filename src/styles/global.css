@@ -1,24 +1,86 @@
-@import "tailwindcss";
-
-@theme {
+:root {
   --color-vue-green: #42b883;
   --color-vue-blue: #35495e;
+  --bg-color: #ffffff;
+  --text-color: #35495e;
+  --glass-bg: rgba(255, 255, 255, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --liquid-glass-from: rgba(255, 255, 255, 0.6);
+  --liquid-glass-to: rgba(255, 255, 255, 0.2);
 }
 
-@layer base {
-  body {
-    @apply bg-white dark:bg-[#020617] text-[#35495e] dark:text-gray-100 transition-colors duration-300;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #020617;
+    --text-color: #f3f4f6;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --liquid-glass-from: rgba(255, 255, 255, 0.1);
+    --liquid-glass-to: transparent;
   }
 }
 
-@layer components {
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base resets */
+h1, h2, h3, h4, h5, h6, p, ul {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+button, input, textarea {
+  font-family: inherit;
+}
+
+/* Utilities container */
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+@media (min-width: 640px) { .container { max-width: 640px; } }
+@media (min-width: 768px) { .container { max-width: 768px; } }
+@media (min-width: 1024px) { .container { max-width: 1024px; } }
+@media (min-width: 1280px) { .container { max-width: 1280px; } }
+
+/* Components */
+.glass-card {
+  background-color: var(--glass-bg);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+}
+@media (prefers-color-scheme: dark) {
   .glass-card {
-    @apply bg-white/40 dark:bg-white/5 backdrop-blur-lg border border-white/20 dark:border-white/10 shadow-[0_8px_32px_0_rgba(31,38,135,0.07)] dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
   }
-  
-  .liquid-glass {
-    @apply bg-gradient-to-br from-white/60 to-white/20 dark:from-white/10 dark:to-transparent backdrop-blur-xl border border-white/40 dark:border-white/10 shadow-2xl;
-  }
+}
+
+.liquid-glass {
+  background: linear-gradient(to bottom right, var(--liquid-glass-from), var(--liquid-glass-to));
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 @keyframes float {
@@ -30,3 +92,17 @@
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+@keyframes pulse {
+  50% { opacity: .5; }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Common Text Utils */
+.text-vue-green { color: var(--color-vue-green); }
+.text-vue-blue { color: var(--color-vue-blue); }
+.bg-vue-green { background-color: var(--color-vue-green); }
+.bg-vue-blue { background-color: var(--color-vue-blue); }
