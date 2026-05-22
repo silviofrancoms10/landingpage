@@ -70,6 +70,12 @@ const testimonials = [
     company: "Guedes Logística",
     quote: "Eles entendem de negócio, não só de código. A consultoria estratégica inicial poupou meses de erros no nosso marketing.",
     image: "https://i.pravatar.cc/150?u=bruno"
+  },
+  {
+    name: "Rudney Ramos",
+    company: "Incoplim",
+    quote: "Foi muito positivo para minha loja de produtos de limpeza, aumentou muito o número de clientes! Ajudou muito meu rankeamento no Google",
+    image: "https://i.pravatar.cc/150?u=rudney"
   }
 ];
 </script>
