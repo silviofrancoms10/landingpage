@@ -60,7 +60,7 @@ const testimonials = [
     image: "https://i.pravatar.cc/150?u=marcos"
   },
   {
-    name: "Fabio Mendes",
+    name: "Fabiola Mendes",
     company: "Mendes Advocacia",
     quote: "Nossa Landing Page converte 4x mais que o site antigo. A clareza da proposta de valor e a velocidade fazem toda a diferença.",
     image: "https://i.pravatar.cc/150?u=fabio"
